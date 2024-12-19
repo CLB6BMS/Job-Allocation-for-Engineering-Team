@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Allocation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .priority-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .priority-container label {
+            margin: 0;
+            font-weight: normal;
+        }
+        .priority-container input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Job Allocation Form</h2>
+        <form id="job-allocation-form">
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" name="job-description" rows="4" required></textarea>
+
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" required>
+
+            <label>Priority:</label>
+            <div class="priority-container">
+                <label><input type="radio" name="priority" value="1" required> Very High</label>
+                <label><input type="radio" name="priority" value="2"> High</label>
+                <label><input type="radio" name="priority" value="3"> Medium</label>
+                <label><input type="radio" name="priority" value="4"> Low</label>
+                <label><input type="radio" name="priority" value="5"> Very Low</label>
+            </div>
+
+            <label for="assigned-by">Assigned By:</label>
+            <select id="assigned-by" name="assigned-by" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Aravinda Dharmathilaka">Aravinda Dharmathilaka</option>
+                <option value="Shehan Gunathilake">Shehan Gunathilake</option>
+                <option value="Athula Nanayakkara">Athula Nanayakkara</option>
+                <option value="Sajith Rambukpitiya">Sajith Rambukpitiya</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
